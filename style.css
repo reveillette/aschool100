@@ -1,55 +1,30 @@
-.body{
-	margin: 0px;
-	display: flex;
-	flex-direction: row;
-	justify-content: : flex-start;
-	align-items: stretch;
-	align-content: stretch;
-}
-
-.flip-container {
-	perspective: 1000px;
-	flex-grow: 2;
-	flex-shrink: 0.5;
-}
-	/* flip the pane when hovered */
-	.flip-container:hover .flipper, .flip-container.hover .flipper {
-		transform: rotateY(180deg);
-		transform-origin: 50% 0px;
-	}
-
-.flip-container {
-	width: 150px;
-	height: 100px;
-	display:inline-block;
+body {
+	margin: 0;
+	padding: 0;
 }
 
 
-/* flip speed goes here */
-.flipper {
-	transition: 0.6s;
-	transform-style: preserve-3d;
-	height: 150px;
-	position: relative;
-	
-}
-
-/* hide back of pane during swap */
-.front, .back {
-	backface-visibility: hidden;
-	position: absolute;
+#map {
+	position: fixed;
 	top: 0;
-	left: 0;
+	bottom: 0;
+	right: 0;
+	width: 100%;	/* 100% of viewport width */
+	height: 100vh;	/* 100% of viewport height */
 }
 
-/* front pane, placed above back */
-.front {
-	z-index: 2;
-	/* for firefox 31 */
-	transform: rotateY(0deg);
+#colorbutton {
+position: absolute;
+/*background: #fff;*/
+padding: 10px;
+/*font-family: 'Open Sans', sans-serif;*/
 }
 
-/* back, initially hidden pane */
-.back {
-	transform: rotateY(180deg);
+button {
+    width: 56px;
+    height: 20px;
+    padding:0px;
+    border-width:0px;
+    margin:0px;
+
 }
